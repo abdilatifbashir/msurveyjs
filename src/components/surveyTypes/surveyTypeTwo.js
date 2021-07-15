@@ -9,9 +9,11 @@ const TnpsSurvey = () => {
     console.log(survey.data)
     alert("The results are:" + JSON.stringify(survey.data));
 }
+const myJson = window.localStorage.getItem("YourStorageName")
+console.log(myJson)
     return(
         <Survey.Survey 
-        json = {json}
+        json = {myJson}
         // showCompletedPage = {false}
         // onComplete = {(data) => console.log(data.valuesHash)}
         //  onComplete = {(data) => console.log(data)}

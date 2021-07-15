@@ -31,6 +31,17 @@ creator.showPropertyGrid = "right";
 //Make toolbox active by default
 creator.rightContainerActiveItem("toolbox");
 
+
+creator.text = window.localStorage.getItem("YourStorageName") || "";
+
+creator.saveSurveyFunc = function(saveNo, callback) {
+    //Save the survey definition into a local storage
+    window.localStorage.setItem("YourStorageName", creator.text);
+    !!callback && callback(saveNo, true);
+};
+
+// console.log(creator.text)
+
     
 
     
