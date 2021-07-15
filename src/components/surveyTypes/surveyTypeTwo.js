@@ -1,10 +1,10 @@
 import React from "react"
 import "survey-react/survey.css"
 import * as Survey from "survey-react"
-import {json} from "../surveys/questionOne"
+import {json} from "../surveys/questionTwo"
 
 const TnpsSurvey = () => {
-    function sendDataToServer(survey) {
+       function sendDataToServer(survey) {
     // send Ajax request to your web server.
     console.log(survey.data)
     alert("The results are:" + JSON.stringify(survey.data));

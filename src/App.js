@@ -1,12 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
-import SurveyOne from './components/surveyDisplays/surveyOne';
+import SurveyTwo from './components/surveyDisplays/surveyTwo';
+import SurveyComponent from "./components/surveyCreator/surveyCreator"
+import {BrowserRouter as Router,Route,Switch} from "react-router-dom"
+import Layout from './Layout';
 
 function App() {
-  return (
-    <div className="App">
-     <SurveyOne />
+   return (
+    <Router>
+      <div className="App">
+       
+     <Switch>
+      <Route exact path="/" component={Layout }/>
+      <Route exact path="/survey" component={SurveyTwo }/>
+      <Route exact path="/survey-creator" component={SurveyComponent} />
+        
+     </Switch>
     </div>
+    </Router>
   );
 }
 
